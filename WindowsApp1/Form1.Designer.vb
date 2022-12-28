@@ -36,7 +36,6 @@ Partial Class Form1
         Me.PanelUserData = New System.Windows.Forms.Panel()
         Me.GroupBoxImage = New System.Windows.Forms.GroupBox()
         Me.LabelID = New System.Windows.Forms.Label()
-        Me.PictureBoxUserImage = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LabelObservations = New System.Windows.Forms.Label()
@@ -70,11 +69,8 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
         Me.vecesDedo = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.TextBoxObservations = New System.Windows.Forms.TextBox()
         Me.PanelReadingTagProcess = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
@@ -86,7 +82,6 @@ Partial Class Form1
         Me.TextBoxSurname = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.PictureBoxImagePreview = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -98,7 +93,6 @@ Partial Class Form1
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.PictureBoxImageInput = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.LabelGetID = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -119,6 +113,7 @@ Partial Class Form1
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBoxStatusConnect = New System.Windows.Forms.PictureBox()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
@@ -126,27 +121,33 @@ Partial Class Form1
         Me.ButtonRegistration = New System.Windows.Forms.Button()
         Me.ButtonUserData = New System.Windows.Forms.Button()
         Me.ButtonConnection = New System.Windows.Forms.Button()
+        Me.imagenHuella = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
+        Me.PictureBoxImagePreview = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxImageInput = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxUserImage = New System.Windows.Forms.PictureBox()
         Me.PanelConnection.SuspendLayout()
         Me.PanelUserData.SuspendLayout()
         Me.GroupBoxImage.SuspendLayout()
-        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.PanelRegistrationandEditUserData.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReadingTagProcess.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBoxStatusConnect, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxSelect, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelConectionStatus
@@ -288,15 +289,6 @@ Partial Class Form1
         Me.LabelID.TabIndex = 2
         Me.LabelID.Text = "ID: __________"
         '
-        'PictureBoxUserImage
-        '
-        Me.PictureBoxUserImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxUserImage.Location = New System.Drawing.Point(20, 36)
-        Me.PictureBoxUserImage.Name = "PictureBoxUserImage"
-        Me.PictureBoxUserImage.Size = New System.Drawing.Size(174, 174)
-        Me.PictureBoxUserImage.TabIndex = 0
-        Me.PictureBoxUserImage.TabStop = False
-        '
         'Panel2
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -312,6 +304,7 @@ Partial Class Form1
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.LabelObservations)
         Me.GroupBox1.Controls.Add(Me.Label36)
         Me.GroupBox1.Controls.Add(Me.Label34)
@@ -342,15 +335,15 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(14, 271)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(585, 263)
+        Me.GroupBox1.Size = New System.Drawing.Size(552, 263)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalled Data"
+        Me.GroupBox1.Text = "Datos del usuario"
         '
         'LabelObservations
         '
         Me.LabelObservations.AutoSize = True
-        Me.LabelObservations.Location = New System.Drawing.Point(151, 192)
+        Me.LabelObservations.Location = New System.Drawing.Point(152, 202)
         Me.LabelObservations.Name = "LabelObservations"
         Me.LabelObservations.Size = New System.Drawing.Size(61, 13)
         Me.LabelObservations.TabIndex = 30
@@ -359,7 +352,7 @@ Partial Class Form1
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(128, 192)
+        Me.Label36.Location = New System.Drawing.Point(129, 202)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(10, 13)
         Me.Label36.TabIndex = 29
@@ -368,7 +361,7 @@ Partial Class Form1
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(33, 192)
+        Me.Label34.Location = New System.Drawing.Point(34, 202)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(78, 13)
         Me.Label34.TabIndex = 28
@@ -377,7 +370,7 @@ Partial Class Form1
         'LabelMail
         '
         Me.LabelMail.AutoSize = True
-        Me.LabelMail.Location = New System.Drawing.Point(151, 152)
+        Me.LabelMail.Location = New System.Drawing.Point(152, 162)
         Me.LabelMail.Name = "LabelMail"
         Me.LabelMail.Size = New System.Drawing.Size(61, 13)
         Me.LabelMail.TabIndex = 27
@@ -386,7 +379,7 @@ Partial Class Form1
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(128, 152)
+        Me.Label23.Location = New System.Drawing.Point(129, 162)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(10, 13)
         Me.Label23.TabIndex = 26
@@ -395,7 +388,7 @@ Partial Class Form1
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(33, 152)
+        Me.Label24.Location = New System.Drawing.Point(34, 162)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(93, 13)
         Me.Label24.TabIndex = 25
@@ -404,7 +397,7 @@ Partial Class Form1
         'LabelCu
         '
         Me.LabelCu.AutoSize = True
-        Me.LabelCu.Location = New System.Drawing.Point(151, 132)
+        Me.LabelCu.Location = New System.Drawing.Point(152, 142)
         Me.LabelCu.Name = "LabelCu"
         Me.LabelCu.Size = New System.Drawing.Size(61, 13)
         Me.LabelCu.TabIndex = 24
@@ -413,7 +406,7 @@ Partial Class Form1
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(128, 132)
+        Me.Label26.Location = New System.Drawing.Point(129, 142)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(10, 13)
         Me.Label26.TabIndex = 23
@@ -422,7 +415,7 @@ Partial Class Form1
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(33, 132)
+        Me.Label27.Location = New System.Drawing.Point(34, 142)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(49, 13)
         Me.Label27.TabIndex = 22
@@ -431,7 +424,7 @@ Partial Class Form1
         'LabelAddress
         '
         Me.LabelAddress.AutoSize = True
-        Me.LabelAddress.Location = New System.Drawing.Point(151, 172)
+        Me.LabelAddress.Location = New System.Drawing.Point(152, 182)
         Me.LabelAddress.Name = "LabelAddress"
         Me.LabelAddress.Size = New System.Drawing.Size(61, 13)
         Me.LabelAddress.TabIndex = 21
@@ -440,7 +433,7 @@ Partial Class Form1
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(128, 172)
+        Me.Label29.Location = New System.Drawing.Point(129, 182)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(10, 13)
         Me.Label29.TabIndex = 20
@@ -449,7 +442,7 @@ Partial Class Form1
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(33, 172)
+        Me.Label30.Location = New System.Drawing.Point(34, 182)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(49, 13)
         Me.Label30.TabIndex = 19
@@ -458,7 +451,7 @@ Partial Class Form1
         'LabelCi
         '
         Me.LabelCi.AutoSize = True
-        Me.LabelCi.Location = New System.Drawing.Point(151, 112)
+        Me.LabelCi.Location = New System.Drawing.Point(152, 122)
         Me.LabelCi.Name = "LabelCi"
         Me.LabelCi.Size = New System.Drawing.Size(61, 13)
         Me.LabelCi.TabIndex = 18
@@ -467,7 +460,7 @@ Partial Class Form1
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(128, 112)
+        Me.Label32.Location = New System.Drawing.Point(129, 122)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(10, 13)
         Me.Label32.TabIndex = 17
@@ -476,7 +469,7 @@ Partial Class Form1
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(34, 112)
+        Me.Label33.Location = New System.Drawing.Point(35, 122)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(50, 13)
         Me.Label33.TabIndex = 16
@@ -485,7 +478,7 @@ Partial Class Form1
         'LabelCareer
         '
         Me.LabelCareer.AutoSize = True
-        Me.LabelCareer.Location = New System.Drawing.Point(151, 72)
+        Me.LabelCareer.Location = New System.Drawing.Point(152, 82)
         Me.LabelCareer.Name = "LabelCareer"
         Me.LabelCareer.Size = New System.Drawing.Size(61, 13)
         Me.LabelCareer.TabIndex = 15
@@ -494,7 +487,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(128, 72)
+        Me.Label10.Location = New System.Drawing.Point(129, 82)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(10, 13)
         Me.Label10.TabIndex = 14
@@ -503,7 +496,7 @@ Partial Class Form1
         'LabelCity
         '
         Me.LabelCity.AutoSize = True
-        Me.LabelCity.Location = New System.Drawing.Point(34, 72)
+        Me.LabelCity.Location = New System.Drawing.Point(35, 82)
         Me.LabelCity.Name = "LabelCity"
         Me.LabelCity.Size = New System.Drawing.Size(41, 13)
         Me.LabelCity.TabIndex = 13
@@ -512,7 +505,7 @@ Partial Class Form1
         'LabelSurname
         '
         Me.LabelSurname.AutoSize = True
-        Me.LabelSurname.Location = New System.Drawing.Point(151, 52)
+        Me.LabelSurname.Location = New System.Drawing.Point(152, 62)
         Me.LabelSurname.Name = "LabelSurname"
         Me.LabelSurname.Size = New System.Drawing.Size(61, 13)
         Me.LabelSurname.TabIndex = 12
@@ -521,7 +514,7 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(128, 52)
+        Me.Label7.Location = New System.Drawing.Point(129, 62)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(10, 13)
         Me.Label7.TabIndex = 11
@@ -530,7 +523,7 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(34, 52)
+        Me.Label6.Location = New System.Drawing.Point(35, 62)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 13)
         Me.Label6.TabIndex = 10
@@ -539,7 +532,7 @@ Partial Class Form1
         'LabelMobile
         '
         Me.LabelMobile.AutoSize = True
-        Me.LabelMobile.Location = New System.Drawing.Point(151, 92)
+        Me.LabelMobile.Location = New System.Drawing.Point(152, 102)
         Me.LabelMobile.Name = "LabelMobile"
         Me.LabelMobile.Size = New System.Drawing.Size(61, 13)
         Me.LabelMobile.TabIndex = 9
@@ -548,7 +541,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(128, 92)
+        Me.Label5.Location = New System.Drawing.Point(129, 102)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(10, 13)
         Me.Label5.TabIndex = 8
@@ -557,7 +550,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(34, 92)
+        Me.Label4.Location = New System.Drawing.Point(35, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 13)
         Me.Label4.TabIndex = 7
@@ -573,17 +566,17 @@ Partial Class Form1
         Me.ButtonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClear.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClear.ForeColor = System.Drawing.Color.Black
-        Me.ButtonClear.Location = New System.Drawing.Point(497, 226)
+        Me.ButtonClear.Location = New System.Drawing.Point(464, 226)
         Me.ButtonClear.Name = "ButtonClear"
         Me.ButtonClear.Size = New System.Drawing.Size(68, 21)
         Me.ButtonClear.TabIndex = 6
-        Me.ButtonClear.Text = "Clear"
+        Me.ButtonClear.Text = "Limpiar"
         Me.ButtonClear.UseVisualStyleBackColor = False
         '
         'LabelName
         '
         Me.LabelName.AutoSize = True
-        Me.LabelName.Location = New System.Drawing.Point(151, 32)
+        Me.LabelName.Location = New System.Drawing.Point(152, 42)
         Me.LabelName.Name = "LabelName"
         Me.LabelName.Size = New System.Drawing.Size(61, 13)
         Me.LabelName.TabIndex = 5
@@ -592,7 +585,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(128, 32)
+        Me.Label3.Location = New System.Drawing.Point(129, 42)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(10, 13)
         Me.Label3.TabIndex = 4
@@ -601,7 +594,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(34, 32)
+        Me.Label2.Location = New System.Drawing.Point(35, 42)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 3
@@ -661,17 +654,6 @@ Partial Class Form1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Huella"
         '
-        'imagenHuella
-        '
-        Me.imagenHuella.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.imagenHuella.Image = Global.WindowsApp1.My.Resources.Resources.huella_2
-        Me.imagenHuella.Location = New System.Drawing.Point(14, 19)
-        Me.imagenHuella.Name = "imagenHuella"
-        Me.imagenHuella.Size = New System.Drawing.Size(88, 83)
-        Me.imagenHuella.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.imagenHuella.TabIndex = 0
-        Me.imagenHuella.TabStop = False
-        '
         'TextBoxObservations
         '
         Me.TextBoxObservations.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -692,31 +674,6 @@ Partial Class Form1
         Me.PanelReadingTagProcess.Size = New System.Drawing.Size(187, 165)
         Me.PanelReadingTagProcess.TabIndex = 17
         Me.PanelReadingTagProcess.Visible = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.__Iphone_spinner_1
-        Me.PictureBox2.Location = New System.Drawing.Point(41, 55)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(96, 92)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 20
-        Me.PictureBox2.TabStop = False
-        '
-        'ButtonCloseReadingTag
-        '
-        Me.ButtonCloseReadingTag.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.klipartz_com
-        Me.ButtonCloseReadingTag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonCloseReadingTag.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.ButtonCloseReadingTag.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ButtonCloseReadingTag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
-        Me.ButtonCloseReadingTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonCloseReadingTag.ImageKey = "(ninguno)"
-        Me.ButtonCloseReadingTag.Location = New System.Drawing.Point(163, 3)
-        Me.ButtonCloseReadingTag.Name = "ButtonCloseReadingTag"
-        Me.ButtonCloseReadingTag.Size = New System.Drawing.Size(21, 19)
-        Me.ButtonCloseReadingTag.TabIndex = 19
-        Me.ButtonCloseReadingTag.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -830,16 +787,6 @@ Partial Class Form1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Vista de registro"
         '
-        'PictureBoxImagePreview
-        '
-        Me.PictureBoxImagePreview.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxImagePreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxImagePreview.Location = New System.Drawing.Point(462, 68)
-        Me.PictureBoxImagePreview.Name = "PictureBoxImagePreview"
-        Me.PictureBoxImagePreview.Size = New System.Drawing.Size(84, 84)
-        Me.PictureBoxImagePreview.TabIndex = 22
-        Me.PictureBoxImagePreview.TabStop = False
-        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -947,17 +894,6 @@ Partial Class Form1
         Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Image"
-        '
-        'PictureBoxImageInput
-        '
-        Me.PictureBoxImageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxImageInput.Image = Global.WindowsApp1.My.Resources.Resources.userimage2
-        Me.PictureBoxImageInput.Location = New System.Drawing.Point(14, 19)
-        Me.PictureBoxImageInput.Name = "PictureBoxImageInput"
-        Me.PictureBoxImageInput.Size = New System.Drawing.Size(88, 83)
-        Me.PictureBoxImageInput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBoxImageInput.TabIndex = 0
-        Me.PictureBoxImageInput.TabStop = False
         '
         'GroupBox2
         '
@@ -1136,6 +1072,23 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(464, 189)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(68, 21)
+        Me.Button1.TabIndex = 31
+        Me.Button1.Text = "Huella"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'PictureBoxStatusConnect
         '
         Me.PictureBoxStatusConnect.BackColor = System.Drawing.Color.Transparent
@@ -1232,6 +1185,72 @@ Partial Class Form1
         Me.ButtonConnection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConnection.UseVisualStyleBackColor = True
         '
+        'imagenHuella
+        '
+        Me.imagenHuella.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.imagenHuella.Image = Global.WindowsApp1.My.Resources.Resources.huella_2
+        Me.imagenHuella.Location = New System.Drawing.Point(14, 19)
+        Me.imagenHuella.Name = "imagenHuella"
+        Me.imagenHuella.Size = New System.Drawing.Size(88, 83)
+        Me.imagenHuella.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.imagenHuella.TabIndex = 0
+        Me.imagenHuella.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.__Iphone_spinner_1
+        Me.PictureBox2.Location = New System.Drawing.Point(41, 55)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(96, 92)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 20
+        Me.PictureBox2.TabStop = False
+        '
+        'ButtonCloseReadingTag
+        '
+        Me.ButtonCloseReadingTag.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.klipartz_com
+        Me.ButtonCloseReadingTag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonCloseReadingTag.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.ButtonCloseReadingTag.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ButtonCloseReadingTag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.ButtonCloseReadingTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonCloseReadingTag.ImageKey = "(ninguno)"
+        Me.ButtonCloseReadingTag.Location = New System.Drawing.Point(163, 3)
+        Me.ButtonCloseReadingTag.Name = "ButtonCloseReadingTag"
+        Me.ButtonCloseReadingTag.Size = New System.Drawing.Size(21, 19)
+        Me.ButtonCloseReadingTag.TabIndex = 19
+        Me.ButtonCloseReadingTag.UseVisualStyleBackColor = True
+        '
+        'PictureBoxImagePreview
+        '
+        Me.PictureBoxImagePreview.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxImagePreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxImagePreview.Location = New System.Drawing.Point(462, 68)
+        Me.PictureBoxImagePreview.Name = "PictureBoxImagePreview"
+        Me.PictureBoxImagePreview.Size = New System.Drawing.Size(84, 84)
+        Me.PictureBoxImagePreview.TabIndex = 22
+        Me.PictureBoxImagePreview.TabStop = False
+        '
+        'PictureBoxImageInput
+        '
+        Me.PictureBoxImageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxImageInput.Image = Global.WindowsApp1.My.Resources.Resources.userimage2
+        Me.PictureBoxImageInput.Location = New System.Drawing.Point(14, 19)
+        Me.PictureBoxImageInput.Name = "PictureBoxImageInput"
+        Me.PictureBoxImageInput.Size = New System.Drawing.Size(88, 83)
+        Me.PictureBoxImageInput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxImageInput.TabIndex = 0
+        Me.PictureBoxImageInput.TabStop = False
+        '
+        'PictureBoxUserImage
+        '
+        Me.PictureBoxUserImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxUserImage.Location = New System.Drawing.Point(20, 36)
+        Me.PictureBoxUserImage.Name = "PictureBoxUserImage"
+        Me.PictureBoxUserImage.Size = New System.Drawing.Size(174, 174)
+        Me.PictureBoxUserImage.TabIndex = 0
+        Me.PictureBoxUserImage.TabStop = False
+        '
         'Form1
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock
@@ -1243,9 +1262,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBoxStatusConnect)
         Me.Controls.Add(Me.LabelConectionStatus)
         Me.Controls.Add(Me.PanelMenu)
+        Me.Controls.Add(Me.PanelUserData)
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
-        Me.Controls.Add(Me.PanelUserData)
         Me.Name = "Form1"
         Me.Text = "RFID Arduino User by Uteh Str"
         Me.PanelConnection.ResumeLayout(False)
@@ -1253,29 +1272,29 @@ Partial Class Form1
         Me.PanelUserData.ResumeLayout(False)
         Me.GroupBoxImage.ResumeLayout(False)
         Me.GroupBoxImage.PerformLayout()
-        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.PanelRegistrationandEditUserData.ResumeLayout(False)
         Me.PanelRegistrationandEditUserData.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
-        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelReadingTagProcess.ResumeLayout(False)
         Me.PanelReadingTagProcess.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.PictureBoxStatusConnect, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxSelect, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1383,4 +1402,5 @@ Partial Class Form1
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents imagenHuella As PictureBox
     Friend WithEvents vecesDedo As Label
+    Friend WithEvents Button1 As Button
 End Class
