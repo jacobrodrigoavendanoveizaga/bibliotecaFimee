@@ -912,9 +912,14 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        pararCaptura()
         Me.Hide()
         Dim ventanaBuscar As New Busqueda()
         ventanaBuscar.ShowDialog()
+    End Sub
+
+    Private Sub Form1_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
+        pararCaptura()
     End Sub
 
 

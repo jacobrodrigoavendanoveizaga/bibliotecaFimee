@@ -1262,9 +1262,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBoxStatusConnect)
         Me.Controls.Add(Me.LabelConectionStatus)
         Me.Controls.Add(Me.PanelMenu)
-        Me.Controls.Add(Me.PanelUserData)
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
+        Me.Controls.Add(Me.PanelUserData)
         Me.Name = "Form1"
         Me.Text = "RFID Arduino User by Uteh Str"
         Me.PanelConnection.ResumeLayout(False)

@@ -72,18 +72,24 @@ Public Class Busqueda
         Dim caracteristicas As DPFP.FeatureSet = extraerCaracteristicas(Sample, DPFP.Processing.DataPurpose.Verification)
         If Not caracteristicas Is Nothing Then
             Dim result As New DPFP.Verification.Verification.Result()
-            Dim builderconex As New MySqlConnectionStringBuilder()
-            builderconex.Server = "localhost"
-            builderconex.UserID = "root"
-            builderconex.Password = "root"
-            builderconex.Database = "fimee"
-            Dim conexion As New MySqlConnection(builderconex.ToString())
-            conexion.Open()
-            Dim cmd As New MySqlCommand()
-            cmd = conexion.CreateCommand
-            cmd.CommandText = "SELECT * FROM usuarios"
+            'Dim builderconex As New MySqlConnectionStringBuilder()
+            'builderconex.Server = "localhost"
+            'builderconex.UserID = "root"
+            'builderconex.Password = "root"
+            'builderconex.Database = "fimeeerfid"
+            'Dim Connection As New MySqlConnection(builderconex.ToString())
+            Dim Connection As New MySqlConnection("server=localhost; port=3306; user=root; password=root; database=fimeeerfid")
+            Dim MySQLCMD As New MySqlCommand()
+            Dim MySQLDA As New MySqlDataAdapter
+            Dim DT As New DataTable
+            Dim Table_Name As String = "fimeeerfidone" 'name the table
+            Dim Data As Integer
+            Connection.Open()
+            'Dim MySQLCMD As New MySqlCommand()
+            MySQLCMD = Connection.CreateCommand
+            MySQLCMD.CommandText = "SELECT * FROM fimeeerfidone"
             Dim read As MySqlDataReader
-            read = cmd.ExecuteReader()
+            read = MySQLCMD.ExecuteReader()
             Dim verificado As Boolean = False
             Dim nombre As String = ""
             While read.Read()
@@ -102,9 +108,9 @@ Public Class Busqueda
                 MessageBox.Show("no se encontro ningun registro")
             End If
             read.Dispose()
-            cmd.Dispose()
-            conexion.Close()
-            conexion.Dispose()
+            MySQLCMD.Dispose()
+            Connection.Close()
+            Connection.Dispose()
         End If
     End Sub
 
