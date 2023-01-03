@@ -94,6 +94,15 @@ Public Class Busqueda
             read = MySQLCMD.ExecuteReader()
             Dim verificado As Boolean = False
             Dim nombre As String = ""
+            Dim id As String = ""
+            Dim apellidos As String = ""
+            Dim carrera As String = ""
+            Dim celular As String = ""
+            Dim carnetId As String = ""
+            Dim carnetU As String = ""
+            Dim correo As String = ""
+            Dim domicilio As String = ""
+            Dim observaciones As String = ""
             Dim imagen As Bitmap
 
             While read.Read()
@@ -102,6 +111,15 @@ Public Class Busqueda
                 verificador.Verify(caracteristicas, template, result)
                 If (result.Verified) Then
                     nombre = read("Nombre")
+                    id = read("ID")
+                    apellidos = read("Apellidos")
+                    carrera = read("Carrera")
+                    celular = read("Celular")
+                    carnetId = read("CarnetId")
+                    carnetU = read("CarnetU")
+                    correo = read("Correo")
+                    domicilio = read("Domicilio")
+                    observaciones = read("Observaciones")
                     Dim images As Byte() = read("Images")
                     imagen = New Bitmap(New MemoryStream(images))
                     verificado = True
@@ -116,6 +134,33 @@ Public Class Busqueda
                 LabelName1.Invoke(Sub()
                                       LabelName1.Text = nombre
                                   End Sub)
+                LabelSurname1.Invoke(Sub()
+                                         LabelSurname1.Text = apellidos
+                                     End Sub)
+                LabelID1.Invoke(Sub()
+                                    LabelID1.Text = id
+                                End Sub)
+                LabelCareer1.Invoke(Sub()
+                                        LabelCareer1.Text = carrera
+                                    End Sub)
+                LabelMobile1.Invoke(Sub()
+                                        LabelMobile1.Text = celular
+                                    End Sub)
+                LabelCi1.Invoke(Sub()
+                                    LabelCi1.Text = carnetId
+                                End Sub)
+                LabelCu1.Invoke(Sub()
+                                    LabelCu1.Text = carnetU
+                                End Sub)
+                LabelMail1.Invoke(Sub()
+                                      LabelMail1.Text = correo
+                                  End Sub)
+                LabelAddress1.Invoke(Sub()
+                                         LabelAddress1.Text = domicilio
+                                     End Sub)
+                LabelObservations1.Invoke(Sub()
+                                              LabelObservations1.Text = observaciones
+                                          End Sub)
                 PictureBoxUserImage1.BeginInvoke(Sub()
                                                      PictureBoxUserImage1.Image = imagen
                                                  End Sub)

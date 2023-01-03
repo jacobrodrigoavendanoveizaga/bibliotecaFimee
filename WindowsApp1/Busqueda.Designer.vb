@@ -25,7 +25,7 @@ Partial Class Busqueda
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.GroupBoxImage = New System.Windows.Forms.GroupBox()
-        Me.LabelID = New System.Windows.Forms.Label()
+        Me.LabelID1 = New System.Windows.Forms.Label()
         Me.PictureBoxUserImage1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -88,7 +88,7 @@ Partial Class Busqueda
         '
         'GroupBoxImage
         '
-        Me.GroupBoxImage.Controls.Add(Me.LabelID)
+        Me.GroupBoxImage.Controls.Add(Me.LabelID1)
         Me.GroupBoxImage.Controls.Add(Me.PictureBoxUserImage1)
         Me.GroupBoxImage.Location = New System.Drawing.Point(264, 21)
         Me.GroupBoxImage.Name = "GroupBoxImage"
@@ -97,14 +97,14 @@ Partial Class Busqueda
         Me.GroupBoxImage.TabStop = False
         Me.GroupBoxImage.Text = "Imagen y ID"
         '
-        'LabelID
+        'LabelID1
         '
-        Me.LabelID.AutoSize = True
-        Me.LabelID.Location = New System.Drawing.Point(17, 184)
-        Me.LabelID.Name = "LabelID"
-        Me.LabelID.Size = New System.Drawing.Size(84, 13)
-        Me.LabelID.TabIndex = 2
-        Me.LabelID.Text = "ID: __________"
+        Me.LabelID1.AutoSize = True
+        Me.LabelID1.Location = New System.Drawing.Point(17, 184)
+        Me.LabelID1.Name = "LabelID1"
+        Me.LabelID1.Size = New System.Drawing.Size(84, 13)
+        Me.LabelID1.TabIndex = 2
+        Me.LabelID1.Text = "ID: __________"
         '
         'PictureBoxUserImage1
         '
@@ -457,7 +457,7 @@ Partial Class Busqueda
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents imagenHuella As PictureBox
     Friend WithEvents GroupBoxImage As GroupBox
-    Friend WithEvents LabelID As Label
+    Friend WithEvents LabelID1 As Label
     Friend WithEvents PictureBoxUserImage1 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button1 As Button
