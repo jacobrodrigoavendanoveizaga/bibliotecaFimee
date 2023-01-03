@@ -2,6 +2,7 @@
 Imports DPFP
 Imports DPFP.Capture
 Imports MySql.Data.MySqlClient
+Imports System.Text
 
 Public Class Busqueda
     Implements DPFP.Capture.EventHandler
@@ -84,6 +85,7 @@ Public Class Busqueda
             Dim DT As New DataTable
             Dim Table_Name As String = "fimeeerfidone" 'name the table
             Dim Data As Integer
+
             Connection.Open()
             'Dim MySQLCMD As New MySqlCommand()
             MySQLCMD = Connection.CreateCommand
@@ -92,18 +94,33 @@ Public Class Busqueda
             read = MySQLCMD.ExecuteReader()
             Dim verificado As Boolean = False
             Dim nombre As String = ""
+            Dim imagen As Bitmap
+
             While read.Read()
                 Dim memoria As New MemoryStream(CType(read("huella"), Byte()))
                 template.DeSerialize(memoria.ToArray)
                 verificador.Verify(caracteristicas, template, result)
                 If (result.Verified) Then
                     nombre = read("Nombre")
+                    Dim images As Byte() = read("Images")
+                    imagen = New Bitmap(New MemoryStream(images))
                     verificado = True
+
+
                     Exit While
                 End If
             End While
             If (verificado) Then
-                MessageBox.Show(nombre)
+                'MessageBox.Show(nombre)
+                'LabelName1.Text = DT.Rows(0).Item(nombre)
+                LabelName1.Invoke(Sub()
+                                      LabelName1.Text = nombre
+                                  End Sub)
+                PictureBoxUserImage1.BeginInvoke(Sub()
+                                                     PictureBoxUserImage1.Image = imagen
+                                                 End Sub)
+
+
             Else
                 MessageBox.Show("no se encontro ningun registro")
             End If

@@ -26,41 +26,41 @@ Partial Class Busqueda
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.GroupBoxImage = New System.Windows.Forms.GroupBox()
         Me.LabelID = New System.Windows.Forms.Label()
-        Me.PictureBoxUserImage = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxUserImage1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.LabelObservations = New System.Windows.Forms.Label()
+        Me.LabelObservations1 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.LabelMail = New System.Windows.Forms.Label()
+        Me.LabelMail1 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.LabelCu = New System.Windows.Forms.Label()
+        Me.LabelCu1 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.LabelAddress = New System.Windows.Forms.Label()
+        Me.LabelAddress1 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.LabelCi = New System.Windows.Forms.Label()
+        Me.LabelCi1 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.LabelCareer = New System.Windows.Forms.Label()
+        Me.LabelCareer1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.LabelCity = New System.Windows.Forms.Label()
-        Me.LabelSurname = New System.Windows.Forms.Label()
+        Me.LabelSurname1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.LabelMobile = New System.Windows.Forms.Label()
+        Me.LabelMobile1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ButtonClear = New System.Windows.Forms.Button()
-        Me.LabelName = New System.Windows.Forms.Label()
+        Me.LabelName1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox5.SuspendLayout()
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxImage.SuspendLayout()
-        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxUserImage1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,7 +89,7 @@ Partial Class Busqueda
         'GroupBoxImage
         '
         Me.GroupBoxImage.Controls.Add(Me.LabelID)
-        Me.GroupBoxImage.Controls.Add(Me.PictureBoxUserImage)
+        Me.GroupBoxImage.Controls.Add(Me.PictureBoxUserImage1)
         Me.GroupBoxImage.Location = New System.Drawing.Point(264, 21)
         Me.GroupBoxImage.Name = "GroupBoxImage"
         Me.GroupBoxImage.Size = New System.Drawing.Size(206, 208)
@@ -106,14 +106,14 @@ Partial Class Busqueda
         Me.LabelID.TabIndex = 2
         Me.LabelID.Text = "ID: __________"
         '
-        'PictureBoxUserImage
+        'PictureBoxUserImage1
         '
-        Me.PictureBoxUserImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxUserImage.Location = New System.Drawing.Point(20, 21)
-        Me.PictureBoxUserImage.Name = "PictureBoxUserImage"
-        Me.PictureBoxUserImage.Size = New System.Drawing.Size(166, 160)
-        Me.PictureBoxUserImage.TabIndex = 0
-        Me.PictureBoxUserImage.TabStop = False
+        Me.PictureBoxUserImage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxUserImage1.Location = New System.Drawing.Point(20, 21)
+        Me.PictureBoxUserImage1.Name = "PictureBoxUserImage1"
+        Me.PictureBoxUserImage1.Size = New System.Drawing.Size(166, 160)
+        Me.PictureBoxUserImage1.TabIndex = 0
+        Me.PictureBoxUserImage1.TabStop = False
         '
         'GroupBox1
         '
@@ -121,32 +121,32 @@ Partial Class Busqueda
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.LabelObservations)
+        Me.GroupBox1.Controls.Add(Me.LabelObservations1)
         Me.GroupBox1.Controls.Add(Me.Label36)
         Me.GroupBox1.Controls.Add(Me.Label34)
-        Me.GroupBox1.Controls.Add(Me.LabelMail)
+        Me.GroupBox1.Controls.Add(Me.LabelMail1)
         Me.GroupBox1.Controls.Add(Me.Label23)
         Me.GroupBox1.Controls.Add(Me.Label24)
-        Me.GroupBox1.Controls.Add(Me.LabelCu)
+        Me.GroupBox1.Controls.Add(Me.LabelCu1)
         Me.GroupBox1.Controls.Add(Me.Label26)
         Me.GroupBox1.Controls.Add(Me.Label27)
-        Me.GroupBox1.Controls.Add(Me.LabelAddress)
+        Me.GroupBox1.Controls.Add(Me.LabelAddress1)
         Me.GroupBox1.Controls.Add(Me.Label29)
         Me.GroupBox1.Controls.Add(Me.Label30)
-        Me.GroupBox1.Controls.Add(Me.LabelCi)
+        Me.GroupBox1.Controls.Add(Me.LabelCi1)
         Me.GroupBox1.Controls.Add(Me.Label32)
         Me.GroupBox1.Controls.Add(Me.Label33)
-        Me.GroupBox1.Controls.Add(Me.LabelCareer)
+        Me.GroupBox1.Controls.Add(Me.LabelCareer1)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.LabelCity)
-        Me.GroupBox1.Controls.Add(Me.LabelSurname)
+        Me.GroupBox1.Controls.Add(Me.LabelSurname1)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.LabelMobile)
+        Me.GroupBox1.Controls.Add(Me.LabelMobile1)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.ButtonClear)
-        Me.GroupBox1.Controls.Add(Me.LabelName)
+        Me.GroupBox1.Controls.Add(Me.LabelName1)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 235)
@@ -173,14 +173,14 @@ Partial Class Busqueda
         Me.Button1.Text = "RFID"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'LabelObservations
+        'LabelObservations1
         '
-        Me.LabelObservations.AutoSize = True
-        Me.LabelObservations.Location = New System.Drawing.Point(153, 208)
-        Me.LabelObservations.Name = "LabelObservations"
-        Me.LabelObservations.Size = New System.Drawing.Size(61, 13)
-        Me.LabelObservations.TabIndex = 30
-        Me.LabelObservations.Text = "- - - - - - - - - "
+        Me.LabelObservations1.AutoSize = True
+        Me.LabelObservations1.Location = New System.Drawing.Point(153, 208)
+        Me.LabelObservations1.Name = "LabelObservations1"
+        Me.LabelObservations1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelObservations1.TabIndex = 30
+        Me.LabelObservations1.Text = "- - - - - - - - - "
         '
         'Label36
         '
@@ -200,14 +200,14 @@ Partial Class Busqueda
         Me.Label34.TabIndex = 28
         Me.Label34.Text = "Observaciones"
         '
-        'LabelMail
+        'LabelMail1
         '
-        Me.LabelMail.AutoSize = True
-        Me.LabelMail.Location = New System.Drawing.Point(153, 168)
-        Me.LabelMail.Name = "LabelMail"
-        Me.LabelMail.Size = New System.Drawing.Size(61, 13)
-        Me.LabelMail.TabIndex = 27
-        Me.LabelMail.Text = "- - - - - - - - - "
+        Me.LabelMail1.AutoSize = True
+        Me.LabelMail1.Location = New System.Drawing.Point(153, 168)
+        Me.LabelMail1.Name = "LabelMail1"
+        Me.LabelMail1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelMail1.TabIndex = 27
+        Me.LabelMail1.Text = "- - - - - - - - - "
         '
         'Label23
         '
@@ -227,14 +227,14 @@ Partial Class Busqueda
         Me.Label24.TabIndex = 25
         Me.Label24.Text = "Correo electrónico"
         '
-        'LabelCu
+        'LabelCu1
         '
-        Me.LabelCu.AutoSize = True
-        Me.LabelCu.Location = New System.Drawing.Point(153, 148)
-        Me.LabelCu.Name = "LabelCu"
-        Me.LabelCu.Size = New System.Drawing.Size(61, 13)
-        Me.LabelCu.TabIndex = 24
-        Me.LabelCu.Text = "- - - - - - - - - "
+        Me.LabelCu1.AutoSize = True
+        Me.LabelCu1.Location = New System.Drawing.Point(153, 148)
+        Me.LabelCu1.Name = "LabelCu1"
+        Me.LabelCu1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelCu1.TabIndex = 24
+        Me.LabelCu1.Text = "- - - - - - - - - "
         '
         'Label26
         '
@@ -254,14 +254,14 @@ Partial Class Busqueda
         Me.Label27.TabIndex = 22
         Me.Label27.Text = "Carnet U"
         '
-        'LabelAddress
+        'LabelAddress1
         '
-        Me.LabelAddress.AutoSize = True
-        Me.LabelAddress.Location = New System.Drawing.Point(153, 188)
-        Me.LabelAddress.Name = "LabelAddress"
-        Me.LabelAddress.Size = New System.Drawing.Size(61, 13)
-        Me.LabelAddress.TabIndex = 21
-        Me.LabelAddress.Text = "- - - - - - - - - "
+        Me.LabelAddress1.AutoSize = True
+        Me.LabelAddress1.Location = New System.Drawing.Point(153, 188)
+        Me.LabelAddress1.Name = "LabelAddress1"
+        Me.LabelAddress1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelAddress1.TabIndex = 21
+        Me.LabelAddress1.Text = "- - - - - - - - - "
         '
         'Label29
         '
@@ -281,14 +281,14 @@ Partial Class Busqueda
         Me.Label30.TabIndex = 19
         Me.Label30.Text = "Domicilio"
         '
-        'LabelCi
+        'LabelCi1
         '
-        Me.LabelCi.AutoSize = True
-        Me.LabelCi.Location = New System.Drawing.Point(153, 128)
-        Me.LabelCi.Name = "LabelCi"
-        Me.LabelCi.Size = New System.Drawing.Size(61, 13)
-        Me.LabelCi.TabIndex = 18
-        Me.LabelCi.Text = "- - - - - - - - - "
+        Me.LabelCi1.AutoSize = True
+        Me.LabelCi1.Location = New System.Drawing.Point(153, 128)
+        Me.LabelCi1.Name = "LabelCi1"
+        Me.LabelCi1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelCi1.TabIndex = 18
+        Me.LabelCi1.Text = "- - - - - - - - - "
         '
         'Label32
         '
@@ -308,14 +308,14 @@ Partial Class Busqueda
         Me.Label33.TabIndex = 16
         Me.Label33.Text = "Carnet Id"
         '
-        'LabelCareer
+        'LabelCareer1
         '
-        Me.LabelCareer.AutoSize = True
-        Me.LabelCareer.Location = New System.Drawing.Point(153, 88)
-        Me.LabelCareer.Name = "LabelCareer"
-        Me.LabelCareer.Size = New System.Drawing.Size(61, 13)
-        Me.LabelCareer.TabIndex = 15
-        Me.LabelCareer.Text = "- - - - - - - - - "
+        Me.LabelCareer1.AutoSize = True
+        Me.LabelCareer1.Location = New System.Drawing.Point(153, 88)
+        Me.LabelCareer1.Name = "LabelCareer1"
+        Me.LabelCareer1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelCareer1.TabIndex = 15
+        Me.LabelCareer1.Text = "- - - - - - - - - "
         '
         'Label10
         '
@@ -335,14 +335,14 @@ Partial Class Busqueda
         Me.LabelCity.TabIndex = 13
         Me.LabelCity.Text = "Carrera"
         '
-        'LabelSurname
+        'LabelSurname1
         '
-        Me.LabelSurname.AutoSize = True
-        Me.LabelSurname.Location = New System.Drawing.Point(153, 68)
-        Me.LabelSurname.Name = "LabelSurname"
-        Me.LabelSurname.Size = New System.Drawing.Size(61, 13)
-        Me.LabelSurname.TabIndex = 12
-        Me.LabelSurname.Text = "- - - - - - - - - "
+        Me.LabelSurname1.AutoSize = True
+        Me.LabelSurname1.Location = New System.Drawing.Point(153, 68)
+        Me.LabelSurname1.Name = "LabelSurname1"
+        Me.LabelSurname1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelSurname1.TabIndex = 12
+        Me.LabelSurname1.Text = "- - - - - - - - - "
         '
         'Label7
         '
@@ -362,14 +362,14 @@ Partial Class Busqueda
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Apellidos"
         '
-        'LabelMobile
+        'LabelMobile1
         '
-        Me.LabelMobile.AutoSize = True
-        Me.LabelMobile.Location = New System.Drawing.Point(153, 108)
-        Me.LabelMobile.Name = "LabelMobile"
-        Me.LabelMobile.Size = New System.Drawing.Size(61, 13)
-        Me.LabelMobile.TabIndex = 9
-        Me.LabelMobile.Text = "- - - - - - - - - "
+        Me.LabelMobile1.AutoSize = True
+        Me.LabelMobile1.Location = New System.Drawing.Point(153, 108)
+        Me.LabelMobile1.Name = "LabelMobile1"
+        Me.LabelMobile1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelMobile1.TabIndex = 9
+        Me.LabelMobile1.Text = "- - - - - - - - - "
         '
         'Label5
         '
@@ -406,14 +406,14 @@ Partial Class Busqueda
         Me.ButtonClear.Text = "Limpiar"
         Me.ButtonClear.UseVisualStyleBackColor = False
         '
-        'LabelName
+        'LabelName1
         '
-        Me.LabelName.AutoSize = True
-        Me.LabelName.Location = New System.Drawing.Point(153, 48)
-        Me.LabelName.Name = "LabelName"
-        Me.LabelName.Size = New System.Drawing.Size(61, 13)
-        Me.LabelName.TabIndex = 5
-        Me.LabelName.Text = "- - - - - - - - - "
+        Me.LabelName1.AutoSize = True
+        Me.LabelName1.Location = New System.Drawing.Point(153, 48)
+        Me.LabelName1.Name = "LabelName1"
+        Me.LabelName1.Size = New System.Drawing.Size(61, 13)
+        Me.LabelName1.TabIndex = 5
+        Me.LabelName1.Text = "- - - - - - - - - "
         '
         'Label3
         '
@@ -447,7 +447,7 @@ Partial Class Busqueda
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBoxImage.ResumeLayout(False)
         Me.GroupBoxImage.PerformLayout()
-        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxUserImage1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -458,35 +458,35 @@ Partial Class Busqueda
     Friend WithEvents imagenHuella As PictureBox
     Friend WithEvents GroupBoxImage As GroupBox
     Friend WithEvents LabelID As Label
-    Friend WithEvents PictureBoxUserImage As PictureBox
+    Friend WithEvents PictureBoxUserImage1 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents LabelObservations As Label
+    Friend WithEvents LabelObservations1 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label34 As Label
-    Friend WithEvents LabelMail As Label
+    Friend WithEvents LabelMail1 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
-    Friend WithEvents LabelCu As Label
+    Friend WithEvents LabelCu1 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
-    Friend WithEvents LabelAddress As Label
+    Friend WithEvents LabelAddress1 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents LabelCi As Label
+    Friend WithEvents LabelCi1 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
-    Friend WithEvents LabelCareer As Label
+    Friend WithEvents LabelCareer1 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents LabelCity As Label
-    Friend WithEvents LabelSurname As Label
+    Friend WithEvents LabelSurname1 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents LabelMobile As Label
+    Friend WithEvents LabelMobile1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents ButtonClear As Button
-    Friend WithEvents LabelName As Label
+    Friend WithEvents LabelName1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
 End Class
