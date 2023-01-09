@@ -69,6 +69,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
+        Me.cmdCapturar = New System.Windows.Forms.Button()
         Me.vecesDedo = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
@@ -295,6 +296,7 @@ Partial Class Form1
         Me.PictureBoxUserImage.Location = New System.Drawing.Point(20, 36)
         Me.PictureBoxUserImage.Name = "PictureBoxUserImage"
         Me.PictureBoxUserImage.Size = New System.Drawing.Size(174, 174)
+        Me.PictureBoxUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBoxUserImage.TabIndex = 0
         Me.PictureBoxUserImage.TabStop = False
         '
@@ -628,6 +630,7 @@ Partial Class Form1
         '
         'PanelRegistrationandEditUserData
         '
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.cmdCapturar)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.vecesDedo)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox5)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxObservations)
@@ -659,6 +662,22 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData.Name = "PanelRegistrationandEditUserData"
         Me.PanelRegistrationandEditUserData.Size = New System.Drawing.Size(588, 546)
         Me.PanelRegistrationandEditUserData.TabIndex = 6
+        '
+        'cmdCapturar
+        '
+        Me.cmdCapturar.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.cmdCapturar.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.cmdCapturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.cmdCapturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.cmdCapturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdCapturar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdCapturar.ForeColor = System.Drawing.Color.Black
+        Me.cmdCapturar.Location = New System.Drawing.Point(521, 241)
+        Me.cmdCapturar.Name = "cmdCapturar"
+        Me.cmdCapturar.Size = New System.Drawing.Size(67, 24)
+        Me.cmdCapturar.TabIndex = 30
+        Me.cmdCapturar.Text = "capture"
+        Me.cmdCapturar.UseVisualStyleBackColor = False
         '
         'vecesDedo
         '
@@ -889,30 +908,30 @@ Partial Class Form1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.ClearSelectionToolStripMenuItem, Me.RefreshToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 114)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(167, 92)
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.DeleteToolStripMenuItem.Text = "Eliminar"
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.SelectAllToolStripMenuItem.Text = "Seleccionar todo"
         '
         'ClearSelectionToolStripMenuItem
         '
         Me.ClearSelectionToolStripMenuItem.Name = "ClearSelectionToolStripMenuItem"
-        Me.ClearSelectionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearSelectionToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.ClearSelectionToolStripMenuItem.Text = "Limpiar selección"
         '
         'RefreshToolStripMenuItem
         '
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.RefreshToolStripMenuItem.Text = "Refrescar"
         '
         'CheckBoxByID
@@ -1034,7 +1053,7 @@ Partial Class Form1
         Me.ButtonClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClearForm.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClearForm.ForeColor = System.Drawing.Color.Black
-        Me.ButtonClearForm.Location = New System.Drawing.Point(457, 271)
+        Me.ButtonClearForm.Location = New System.Drawing.Point(449, 253)
         Me.ButtonClearForm.Name = "ButtonClearForm"
         Me.ButtonClearForm.Size = New System.Drawing.Size(82, 49)
         Me.ButtonClearForm.TabIndex = 13
@@ -1050,7 +1069,7 @@ Partial Class Form1
         Me.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonSave.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSave.ForeColor = System.Drawing.Color.Black
-        Me.ButtonSave.Location = New System.Drawing.Point(449, 210)
+        Me.ButtonSave.Location = New System.Drawing.Point(449, 198)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(82, 49)
         Me.ButtonSave.TabIndex = 12
@@ -1262,9 +1281,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBoxStatusConnect)
         Me.Controls.Add(Me.LabelConectionStatus)
         Me.Controls.Add(Me.PanelMenu)
+        Me.Controls.Add(Me.PanelUserData)
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
-        Me.Controls.Add(Me.PanelUserData)
         Me.Name = "Form1"
         Me.Text = "RFID Arduino User by Uteh Str"
         Me.PanelConnection.ResumeLayout(False)
@@ -1403,4 +1422,5 @@ Partial Class Form1
     Friend WithEvents imagenHuella As PictureBox
     Friend WithEvents vecesDedo As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents cmdCapturar As Button
 End Class

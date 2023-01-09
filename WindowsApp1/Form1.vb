@@ -3,6 +3,7 @@ Imports DPFP
 Imports DPFP.Capture
 Imports System.Text
 Imports System.IO
+Imports System.Runtime.InteropServices
 
 Public Class Form1
 
@@ -32,6 +33,56 @@ Public Class Form1
     'Private Delegate Sub _delegadoControles()
     Private template As DPFP.Template
 
+    Dim DATOS As IDataObject
+    Dim IMAGEN As Image
+    Dim CARPETA As String
+    Dim FECHA As String = DateTime.Now.ToShortDateString().Replace("/", "_") + "_" + DateTime.Now.ToLongTimeString().Replace(":", "_")
+    Dim DIRECTORIO As String = "C:\Users\pikachu\Pictures" ' AQUI COLOCA LA RUTA A TU ESCRITORIO
+    Dim DESTINO As String
+    Dim CONTADOR As Integer = 1
+    Dim CARPETAS_DIARIAS As String
+    Public Const WM_CAP As Short = &H400S
+    Public Const WM_CAP_DLG_VIDEOFORMAT As Integer = WM_CAP + 41
+    Public Const WM_CAP_DRIVER_CONNECT As Integer = WM_CAP + 10
+    Public Const WM_CAP_DRIVER_DISCONNECT As Integer = WM_CAP + 11
+    Public Const WM_CAP_EDIT_COPY As Integer = WM_CAP + 30
+    Public Const WM_CAP_SEQUENCE As Integer = WM_CAP + 62
+    Public Const WM_CAP_FILE_SAVEAS As Integer = WM_CAP + 23
+    Public Const WM_CAP_SET_PREVIEW As Integer = WM_CAP + 50
+    Public Const WM_CAP_SET_PREVIEWRATE As Integer = WM_CAP + 52
+    Public Const WM_CAP_SET_SCALE As Integer = WM_CAP + 53
+    Public Const WS_CHILD As Integer = &H40000000
+    Public Const WS_VISIBLE As Integer = &H10000000
+    Public Const SWP_NOMOVE As Short = &H2S
+    Public Const SWP_NOSIZE As Short = 1
+    Public Const SWP_NOZORDER As Short = &H4S
+    Public Const HWND_BOTTOM As Short = 1
+    Public Const WM_CAP_STOP As Integer = WM_CAP + 68
+
+    Public iDevice As Integer = 0 ' Current device ID
+    Public hHwnd As Integer ' Handle to preview window
+
+    Public Declare Function SendMessage Lib "user32" Alias "SendMessageA" _
+        (ByVal hwnd As Integer, ByVal wMsg As Integer, ByVal wParam As Integer,
+        <MarshalAs(UnmanagedType.AsAny)> ByVal lParam As Object) As Integer
+
+    Public Declare Function SetWindowPos Lib "user32" Alias "SetWindowPos" (ByVal hwnd As Integer,
+        ByVal hWndInsertAfter As Integer, ByVal x As Integer, ByVal y As Integer,
+        ByVal cx As Integer, ByVal cy As Integer, ByVal wFlags As Integer) As Integer
+
+    Public Declare Function DestroyWindow Lib "user32" (ByVal hndw As Integer) As Boolean
+
+    Public Declare Function capCreateCaptureWindowA Lib "avicap32.dll" _
+        (ByVal lpszWindowName As String, ByVal dwStyle As Integer,
+        ByVal x As Integer, ByVal y As Integer, ByVal nWidth As Integer,
+        ByVal nHeight As Short, ByVal hWndParent As Integer,
+        ByVal nID As Integer) As Integer
+
+    Public Declare Function capGetDriverDescriptionA Lib "avicap32.dll" (ByVal wDriver As Short,
+        ByVal lpszName As String, ByVal cbName As Integer, ByVal lpszVer As String,
+        ByVal cbVer As Integer) As Boolean
+
+    Public sRuta As String
 
 
 
@@ -515,23 +566,109 @@ Public Class Form1
 
     'CODIGO DE CAPTURA CON LA CAMARA WEB
 
+    Public Sub OpenPreviewWindowCliente()
 
-    '7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+        hHwnd = capCreateCaptureWindowA(iDevice, WS_VISIBLE Or WS_CHILD, 0, 0, 600, ' Open Preview window in picturebox
+           480, Me.PictureBoxImageInput.Handle.ToInt32, 0)
+
+        SendMessage(hHwnd, WM_CAP_DRIVER_CONNECT, iDevice, 0) ' Connect to device
+        If SendMessage(hHwnd, WM_CAP_DRIVER_CONNECT, iDevice, 0) Then
+            SendMessage(hHwnd, WM_CAP_SET_SCALE, True, 0) 'Set the preview scale
+            SendMessage(hHwnd, WM_CAP_SET_PREVIEWRATE, 66, 0) 'Set the preview rate in milliseconds
+            SendMessage(hHwnd, WM_CAP_SET_PREVIEW, True, 0) 'Start previewing the image from the camera
+            SetWindowPos(hHwnd, HWND_BOTTOM, 0, 0, Me.PictureBoxImageInput.Width, Me.PictureBoxImageInput.Height, ' Resize window to fit in picturebox
+                    SWP_NOMOVE Or SWP_NOZORDER)
+
+        Else
+
+            DestroyWindow(hHwnd) ' Error connecting to device close window
+
+        End If
+    End Sub
+
+    Public Sub CapturarCliente()
+        SendMessage(hHwnd, WM_CAP_EDIT_COPY, 0, 0) ' Copy image to clipboard
+        DATOS = Clipboard.GetDataObject() ' Get image from clipboard and convert it to a bitmap
+
+        IMAGEN = CType(DATOS.GetData(GetType(System.Drawing.Bitmap)), Image)
+        Me.PictureBoxImageInput.Image = IMAGEN
+        'GUARDAR.Visible = True
+    End Sub
+
+
+
     Private Sub PictureBoxImageInput_Click(sender As Object, e As EventArgs) Handles PictureBoxImageInput.Click
+        Me.OpenPreviewWindowCliente()
+        PictureBoxImageInput.Enabled = False
+    End Sub
 
-        OpenFileDialog1.FileName = ""
-        OpenFileDialog1.Filter = "JPEG (*.jpeg;*.jpg)|*.jpeg;*.jpg"
+    Private Sub cmdCapturar_Click(sender As Object, e As EventArgs) Handles cmdCapturar.Click
+        Me.CapturarCliente()
+        Me.ClosePreviewWindow()
 
+        Try
+            Dim sFD As New SaveFileDialog
+            sFD.Title = "Guardar Imagen"
+            sFD.Filter = "Imagenes|*.jpg;*.gif;*.png;*.bmp"
+            If sFD.ShowDialog = Windows.Forms.DialogResult.OK Then
+                Me.PictureBoxImageInput.Image.Save(System.IO.Path.GetFullPath(sFD.FileName))
+            End If
+        Catch ex As Exception
+            MessageBox.Show(Err.Description, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        PictureBoxImageInput.Enabled = True
         If (OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
             IMG_FileNameInput = OpenFileDialog1.FileName
             PictureBoxImageInput.ImageLocation = IMG_FileNameInput
         End If
-
-
-
-
-
     End Sub
+
+
+
+    'Private Sub cmdcamara_Click(sender As Object, e As EventArgs) Handles cmdcamara.Click
+
+    'End Sub
+
+    Public Sub ClosePreviewWindow()
+
+        SendMessage(hHwnd, WM_CAP_DRIVER_DISCONNECT, 0, 0) ' Disconnect from device
+        DestroyWindow(hHwnd) ' close window
+    End Sub
+
+
+
+    'Private Sub cmdCapturar_Click(sender As Object, e As EventArgs) Handles cmdCapturar.Click
+
+    'End Sub
+
+    'Private Sub cmdBorrar_Click(sender As Object, e As EventArgs) Handles cmdBorrar.Click
+    '    PicFoto.Image = Nothing
+    'End Sub
+
+    'Private Sub btnGuardarFotoArchivo_Click(sender As Object, e As EventArgs) Handles btnGuardarFotoArchivo.Click
+    '    Try
+    '        Dim sFD As New SaveFileDialog
+    '        sFD.Title = "Guardar Imagen"
+    '        sFD.Filter = "Imagenes|*.jpg;*.gif;*.png;*.bmp"
+    '        If sFD.ShowDialog = Windows.Forms.DialogResult.OK Then
+    '            Me.PicFoto.Image.Save(System.IO.Path.GetFullPath(sFD.FileName))
+    '        End If
+    '    Catch ex As Exception
+    '        MessageBox.Show(Err.Description, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '    End Try
+    'End Sub
+
+    '7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+    'Private Sub PictureBoxImageInput_Click(sender As Object, e As EventArgs) Handles PictureBoxImageInput.Click
+    '    OpenFileDialog1.FileName = ""
+    '    OpenFileDialog1.Filter = "JPEG (*.jpeg;*.jpg)|*.jpeg;*.jpg"
+
+    '    If (OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
+    '        IMG_FileNameInput = OpenFileDialog1.FileName
+    '        PictureBoxImageInput.ImageLocation = IMG_FileNameInput
+    '    End If
+    'End Sub
 
 
     '7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
@@ -925,6 +1062,8 @@ Public Class Form1
     Private Sub Form1_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
         pararCaptura()
     End Sub
+
+
 
 
 

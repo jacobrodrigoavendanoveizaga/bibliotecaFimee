@@ -112,6 +112,7 @@ Partial Class Busqueda
         Me.PictureBoxUserImage1.Location = New System.Drawing.Point(20, 21)
         Me.PictureBoxUserImage1.Name = "PictureBoxUserImage1"
         Me.PictureBoxUserImage1.Size = New System.Drawing.Size(166, 160)
+        Me.PictureBoxUserImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBoxUserImage1.TabIndex = 0
         Me.PictureBoxUserImage1.TabStop = False
         '
