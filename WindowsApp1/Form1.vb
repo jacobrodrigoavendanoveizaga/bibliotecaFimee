@@ -512,6 +512,10 @@ Public Class Form1
     Private Sub ButtonScanID_MouseLeave(sender As Object, e As EventArgs) Handles ButtonScanID.MouseLeave
         ButtonScanID.ForeColor = Color.FromArgb(6, 71, 165)
     End Sub
+
+    'CODIGO DE CAPTURA CON LA CAMARA WEB
+
+
     '7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     Private Sub PictureBoxImageInput_Click(sender As Object, e As EventArgs) Handles PictureBoxImageInput.Click
 
