@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelConectionStatus = New System.Windows.Forms.Label()
         Me.LabelDataTime = New System.Windows.Forms.Label()
         Me.PanelConnection = New System.Windows.Forms.Panel()
@@ -631,10 +631,10 @@ Partial Class Form1
         '
         'PanelRegistrationandEditUserData
         '
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.PanelReadingTagProcess)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.vecesDedo)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox5)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxObservations)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.PanelReadingTagProcess)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label21)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxAddress)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label20)
@@ -666,7 +666,7 @@ Partial Class Form1
         'vecesDedo
         '
         Me.vecesDedo.AutoSize = True
-        Me.vecesDedo.Location = New System.Drawing.Point(287, 198)
+        Me.vecesDedo.Location = New System.Drawing.Point(310, 198)
         Me.vecesDedo.Name = "vecesDedo"
         Me.vecesDedo.Size = New System.Drawing.Size(121, 13)
         Me.vecesDedo.TabIndex = 29
@@ -676,7 +676,7 @@ Partial Class Form1
         '
         Me.GroupBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox5.Controls.Add(Me.imagenHuella)
-        Me.GroupBox5.Location = New System.Drawing.Point(289, 214)
+        Me.GroupBox5.Location = New System.Drawing.Point(313, 214)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(119, 109)
         Me.GroupBox5.TabIndex = 28
@@ -706,10 +706,12 @@ Partial Class Form1
         '
         'PanelReadingTagProcess
         '
+        Me.PanelReadingTagProcess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelReadingTagProcess.Controls.Add(Me.PictureBox2)
         Me.PanelReadingTagProcess.Controls.Add(Me.ButtonCloseReadingTag)
         Me.PanelReadingTagProcess.Controls.Add(Me.Label16)
-        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(413, 308)
+        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(206, 140)
+        Me.PanelReadingTagProcess.Margin = New System.Windows.Forms.Padding(6)
         Me.PanelReadingTagProcess.Name = "PanelReadingTagProcess"
         Me.PanelReadingTagProcess.Size = New System.Drawing.Size(187, 165)
         Me.PanelReadingTagProcess.TabIndex = 17
@@ -718,7 +720,7 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.__Iphone_spinner_1
-        Me.PictureBox2.Location = New System.Drawing.Point(41, 55)
+        Me.PictureBox2.Location = New System.Drawing.Point(45, 45)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(96, 92)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -871,21 +873,21 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.DataGridView1.Location = New System.Drawing.Point(18, 54)
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 43)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(420, 110)
+        Me.DataGridView1.Size = New System.Drawing.Size(449, 146)
         Me.DataGridView1.TabIndex = 21
         '
         'ContextMenuStrip1
@@ -964,7 +966,7 @@ Partial Class Form1
         Me.GroupBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox3.Controls.Add(Me.PictureBox1)
         Me.GroupBox3.Controls.Add(Me.PictureBoxImageInput)
-        Me.GroupBox3.Location = New System.Drawing.Point(151, 211)
+        Me.GroupBox3.Location = New System.Drawing.Point(169, 214)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(119, 109)
         Me.GroupBox3.TabIndex = 15
@@ -1049,7 +1051,7 @@ Partial Class Form1
         Me.ButtonClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClearForm.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClearForm.ForeColor = System.Drawing.Color.Black
-        Me.ButtonClearForm.Location = New System.Drawing.Point(449, 253)
+        Me.ButtonClearForm.Location = New System.Drawing.Point(464, 275)
         Me.ButtonClearForm.Name = "ButtonClearForm"
         Me.ButtonClearForm.Size = New System.Drawing.Size(82, 49)
         Me.ButtonClearForm.TabIndex = 13
@@ -1065,7 +1067,7 @@ Partial Class Form1
         Me.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonSave.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSave.ForeColor = System.Drawing.Color.Black
-        Me.ButtonSave.Location = New System.Drawing.Point(449, 198)
+        Me.ButtonSave.Location = New System.Drawing.Point(464, 210)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(82, 49)
         Me.ButtonSave.TabIndex = 12
