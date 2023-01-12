@@ -602,7 +602,8 @@ Public Class Form1
         PictureBoxImageInput.Enabled = False
     End Sub
 
-    Private Sub cmdCapturar_Click(sender As Object, e As EventArgs) Handles cmdCapturar.Click
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.CapturarCliente()
         Me.ClosePreviewWindow()
 
@@ -1062,6 +1063,8 @@ Public Class Form1
     Private Sub Form1_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
         pararCaptura()
     End Sub
+
+
 
 
 

@@ -69,7 +69,6 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
-        Me.cmdCapturar = New System.Windows.Forms.Button()
         Me.vecesDedo = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
@@ -100,6 +99,7 @@ Partial Class Form1
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxImageInput = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.LabelGetID = New System.Windows.Forms.Label()
@@ -143,6 +143,7 @@ Partial Class Form1
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBoxStatusConnect, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -630,7 +631,6 @@ Partial Class Form1
         '
         'PanelRegistrationandEditUserData
         '
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.cmdCapturar)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.vecesDedo)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox5)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxObservations)
@@ -662,22 +662,6 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData.Name = "PanelRegistrationandEditUserData"
         Me.PanelRegistrationandEditUserData.Size = New System.Drawing.Size(588, 546)
         Me.PanelRegistrationandEditUserData.TabIndex = 6
-        '
-        'cmdCapturar
-        '
-        Me.cmdCapturar.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.cmdCapturar.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.cmdCapturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.cmdCapturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.cmdCapturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdCapturar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdCapturar.ForeColor = System.Drawing.Color.Black
-        Me.cmdCapturar.Location = New System.Drawing.Point(521, 241)
-        Me.cmdCapturar.Name = "cmdCapturar"
-        Me.cmdCapturar.Size = New System.Drawing.Size(67, 24)
-        Me.cmdCapturar.TabIndex = 30
-        Me.cmdCapturar.Text = "capture"
-        Me.cmdCapturar.UseVisualStyleBackColor = False
         '
         'vecesDedo
         '
@@ -725,7 +709,7 @@ Partial Class Form1
         Me.PanelReadingTagProcess.Controls.Add(Me.PictureBox2)
         Me.PanelReadingTagProcess.Controls.Add(Me.ButtonCloseReadingTag)
         Me.PanelReadingTagProcess.Controls.Add(Me.Label16)
-        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(141, 326)
+        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(413, 308)
         Me.PanelReadingTagProcess.Name = "PanelReadingTagProcess"
         Me.PanelReadingTagProcess.Size = New System.Drawing.Size(187, 165)
         Me.PanelReadingTagProcess.TabIndex = 17
@@ -978,6 +962,7 @@ Partial Class Form1
         'GroupBox3
         '
         Me.GroupBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox3.Controls.Add(Me.PictureBox1)
         Me.GroupBox3.Controls.Add(Me.PictureBoxImageInput)
         Me.GroupBox3.Location = New System.Drawing.Point(151, 211)
         Me.GroupBox3.Name = "GroupBox3"
@@ -985,6 +970,17 @@ Partial Class Form1
         Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Image"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.WindowsApp1.My.Resources.Resources.pngwing_com3
+        Me.PictureBox1.Location = New System.Drawing.Point(75, 79)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 30)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
         '
         'PictureBoxImageInput
         '
@@ -1281,9 +1277,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBoxStatusConnect)
         Me.Controls.Add(Me.LabelConectionStatus)
         Me.Controls.Add(Me.PanelMenu)
-        Me.Controls.Add(Me.PanelUserData)
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
+        Me.Controls.Add(Me.PanelUserData)
         Me.Name = "Form1"
         Me.Text = "RFID Arduino User by Uteh Str"
         Me.PanelConnection.ResumeLayout(False)
@@ -1307,6 +1303,7 @@ Partial Class Form1
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -1422,5 +1419,5 @@ Partial Class Form1
     Friend WithEvents imagenHuella As PictureBox
     Friend WithEvents vecesDedo As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents cmdCapturar As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
