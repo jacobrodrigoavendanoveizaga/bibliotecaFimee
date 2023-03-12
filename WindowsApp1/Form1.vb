@@ -1064,6 +1064,47 @@ Public Class Form1
         pararCaptura()
     End Sub
 
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim ruta As String
+        Dim StrExport As String = ""
+
+        For Each c As DataGridViewColumn In DataGridView1.Columns
+            StrExport &= """" & c.HeaderText & ""","
+        Next
+        StrExport = StrExport.Substring(0, StrExport.Length - 1)
+        StrExport &= Environment.NewLine
+        'Dim columnas As Integer = DataGridView1.ColumnCount
+        'Dim filas As Integer = DataGridView1.RowCount
+        'Dim total As Integer = columnas * filas
+
+        For Each r As DataGridViewRow In DataGridView1.Rows
+            For Each c As DataGridViewCell In r.Cells
+                If Not c.Value Is Nothing Then
+                    StrExport &= """" & c.Value.ToString & ""","
+                Else
+                    StrExport &= """" & "" & ""","
+                End If
+
+            Next
+            StrExport = StrExport.Substring(0, StrExport.Length - 1)
+            StrExport &= Environment.NewLine
+        Next
+
+        Dim SaveFileDialog As SaveFileDialog = New SaveFileDialog
+        SaveFileDialog.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+        SaveFileDialog.Filter = "Archivos CSV (*.CSV)|* .CSV"
+        SaveFileDialog.FilterIndex = 2
+        If SaveFileDialog.ShowDialog = DialogResult.OK Then
+            ruta = SaveFileDialog.FileName
+            MsgBox("exportado Correctamente", MsgBoxStyle.Information)
+            Dim tw As IO.TextWriter = New IO.StreamWriter(ruta)
+            tw.Write(StrExport)
+            tw.Close()
+        Else
+            Return
+        End If
+    End Sub
+
 
 
 

@@ -70,6 +70,13 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.PanelReadingTagProcess = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
@@ -78,15 +85,10 @@ Partial Class Form1
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.TextBoxObservations = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBoxMail = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.TextBoxCu = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBoxSurname = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.PictureBoxImagePreview = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -113,9 +115,7 @@ Partial Class Form1
         Me.TextBoxCi = New System.Windows.Forms.TextBox()
         Me.TextBoxMobile = New System.Windows.Forms.TextBox()
         Me.TextBoxCareer = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBoxName = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TimerTimeData = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSerialIn = New System.Windows.Forms.Timer(Me.components)
@@ -129,6 +129,7 @@ Partial Class Form1
         Me.ButtonRegistration = New System.Windows.Forms.Button()
         Me.ButtonUserData = New System.Windows.Forms.Button()
         Me.ButtonConnection = New System.Windows.Forms.Button()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.PanelConnection.SuspendLayout()
         Me.PanelUserData.SuspendLayout()
         Me.GroupBoxImage.SuspendLayout()
@@ -632,6 +633,7 @@ Partial Class Form1
         '
         'PanelRegistrationandEditUserData
         '
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.btnExport)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label20)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label21)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label19)
@@ -663,6 +665,69 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData.Name = "PanelRegistrationandEditUserData"
         Me.PanelRegistrationandEditUserData.Size = New System.Drawing.Size(588, 546)
         Me.PanelRegistrationandEditUserData.TabIndex = 6
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(37, 142)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(55, 13)
+        Me.Label20.TabIndex = 24
+        Me.Label20.Text = "Domicilio :"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(37, 177)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(84, 13)
+        Me.Label21.TabIndex = 26
+        Me.Label21.Text = "Observaciones :"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(37, 110)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(99, 13)
+        Me.Label19.TabIndex = 22
+        Me.Label19.Text = "Correo electrónico :"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(310, 76)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(105, 13)
+        Me.Label18.TabIndex = 20
+        Me.Label18.Text = "Carnet Universitario :"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(26, 43)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(47, 13)
+        Me.Label9.TabIndex = 6
+        Me.Label9.Text = "Carrera :"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(310, 8)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(55, 13)
+        Me.Label17.TabIndex = 18
+        Me.Label17.Text = "Apellidos :"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(26, 8)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(61, 13)
+        Me.Label8.TabIndex = 4
+        Me.Label8.Text = "Nombre(s) :"
         '
         'PanelReadingTagProcess
         '
@@ -752,15 +817,6 @@ Partial Class Form1
         Me.TextBoxObservations.Size = New System.Drawing.Size(517, 20)
         Me.TextBoxObservations.TabIndex = 27
         '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(37, 177)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(84, 13)
-        Me.Label21.TabIndex = 26
-        Me.Label21.Text = "Observaciones :"
-        '
         'TextBoxAddress
         '
         Me.TextBoxAddress.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -770,15 +826,6 @@ Partial Class Form1
         Me.TextBoxAddress.Name = "TextBoxAddress"
         Me.TextBoxAddress.Size = New System.Drawing.Size(517, 20)
         Me.TextBoxAddress.TabIndex = 25
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(37, 142)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(55, 13)
-        Me.Label20.TabIndex = 24
-        Me.Label20.Text = "Domicilio :"
         '
         'TextBoxMail
         '
@@ -790,15 +837,6 @@ Partial Class Form1
         Me.TextBoxMail.Size = New System.Drawing.Size(517, 20)
         Me.TextBoxMail.TabIndex = 23
         '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(37, 110)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(99, 13)
-        Me.Label19.TabIndex = 22
-        Me.Label19.Text = "Correo electrónico :"
-        '
         'TextBoxCu
         '
         Me.TextBoxCu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -809,15 +847,6 @@ Partial Class Form1
         Me.TextBoxCu.Size = New System.Drawing.Size(270, 20)
         Me.TextBoxCu.TabIndex = 21
         '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(310, 76)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(105, 13)
-        Me.Label18.TabIndex = 20
-        Me.Label18.Text = "Carnet Universitario :"
-        '
         'TextBoxSurname
         '
         Me.TextBoxSurname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -827,15 +856,6 @@ Partial Class Form1
         Me.TextBoxSurname.Name = "TextBoxSurname"
         Me.TextBoxSurname.Size = New System.Drawing.Size(270, 20)
         Me.TextBoxSurname.TabIndex = 19
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(310, 8)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(55, 13)
-        Me.Label17.TabIndex = 18
-        Me.Label17.Text = "Apellidos :"
         '
         'GroupBox4
         '
@@ -1053,9 +1073,9 @@ Partial Class Form1
         Me.ButtonClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClearForm.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClearForm.ForeColor = System.Drawing.Color.Black
-        Me.ButtonClearForm.Location = New System.Drawing.Point(464, 279)
+        Me.ButtonClearForm.Location = New System.Drawing.Point(464, 258)
         Me.ButtonClearForm.Name = "ButtonClearForm"
-        Me.ButtonClearForm.Size = New System.Drawing.Size(82, 49)
+        Me.ButtonClearForm.Size = New System.Drawing.Size(82, 34)
         Me.ButtonClearForm.TabIndex = 13
         Me.ButtonClearForm.Text = "Limpiar Campos"
         Me.ButtonClearForm.UseVisualStyleBackColor = False
@@ -1071,7 +1091,7 @@ Partial Class Form1
         Me.ButtonSave.ForeColor = System.Drawing.Color.Black
         Me.ButtonSave.Location = New System.Drawing.Point(464, 224)
         Me.ButtonSave.Name = "ButtonSave"
-        Me.ButtonSave.Size = New System.Drawing.Size(82, 49)
+        Me.ButtonSave.Size = New System.Drawing.Size(82, 28)
         Me.ButtonSave.TabIndex = 12
         Me.ButtonSave.Text = "Guardar"
         Me.ButtonSave.UseVisualStyleBackColor = False
@@ -1124,15 +1144,6 @@ Partial Class Form1
         Me.TextBoxCareer.Size = New System.Drawing.Size(253, 20)
         Me.TextBoxCareer.TabIndex = 7
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(26, 43)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(47, 13)
-        Me.Label9.TabIndex = 6
-        Me.Label9.Text = "Carrera :"
-        '
         'TextBoxName
         '
         Me.TextBoxName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1142,15 +1153,6 @@ Partial Class Form1
         Me.TextBoxName.Name = "TextBoxName"
         Me.TextBoxName.Size = New System.Drawing.Size(254, 20)
         Me.TextBoxName.TabIndex = 5
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(26, 8)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(61, 13)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Nombre(s) :"
         '
         'Panel3
         '
@@ -1269,6 +1271,22 @@ Partial Class Form1
         Me.ButtonConnection.Text = "Conexión"
         Me.ButtonConnection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConnection.UseVisualStyleBackColor = True
+        '
+        'btnExport
+        '
+        Me.btnExport.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnExport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExport.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExport.ForeColor = System.Drawing.Color.Black
+        Me.btnExport.Location = New System.Drawing.Point(464, 298)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(82, 28)
+        Me.btnExport.TabIndex = 30
+        Me.btnExport.Text = "Exportar"
+        Me.btnExport.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -1425,4 +1443,5 @@ Partial Class Form1
     Friend WithEvents vecesDedo As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnExport As Button
 End Class
