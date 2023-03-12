@@ -22,6 +22,7 @@ Partial Class Busqueda
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Busqueda))
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.GroupBoxImage = New System.Windows.Forms.GroupBox()
@@ -442,8 +443,9 @@ Partial Class Busqueda
         Me.Controls.Add(Me.GroupBoxImage)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox5)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Busqueda"
-        Me.Text = "Busqueda"
+        Me.Text = "Biblioteca FIMEE"
         Me.GroupBox5.ResumeLayout(False)
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBoxImage.ResumeLayout(False)

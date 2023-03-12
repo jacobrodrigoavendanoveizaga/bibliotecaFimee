@@ -23,7 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.LabelConectionStatus = New System.Windows.Forms.Label()
         Me.LabelDataTime = New System.Windows.Forms.Label()
         Me.PanelConnection = New System.Windows.Forms.Panel()
@@ -69,14 +70,14 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
-        Me.vecesDedo = New System.Windows.Forms.Label()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.imagenHuella = New System.Windows.Forms.PictureBox()
-        Me.TextBoxObservations = New System.Windows.Forms.TextBox()
         Me.PanelReadingTagProcess = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.vecesDedo = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.imagenHuella = New System.Windows.Forms.PictureBox()
+        Me.TextBoxObservations = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -134,10 +135,10 @@ Partial Class Form1
         CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.PanelRegistrationandEditUserData.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelReadingTagProcess.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,7 +256,7 @@ Partial Class Form1
         '
         Me.PanelTopHeader.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelTopHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.PanelTopHeader.BackColor = System.Drawing.Color.DodgerBlue
         Me.PanelTopHeader.Location = New System.Drawing.Point(0, 0)
         Me.PanelTopHeader.Name = "PanelTopHeader"
         Me.PanelTopHeader.Size = New System.Drawing.Size(618, 5)
@@ -305,7 +306,7 @@ Partial Class Form1
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel2.Location = New System.Drawing.Point(3, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1063, 5)
@@ -631,19 +632,21 @@ Partial Class Form1
         '
         'PanelRegistrationandEditUserData
         '
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label20)
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label21)
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label19)
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label18)
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label9)
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label17)
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label8)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.PanelReadingTagProcess)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.vecesDedo)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox5)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxObservations)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label21)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxAddress)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label20)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxMail)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label19)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxCu)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label18)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxSurname)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label17)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox4)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox3)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox2)
@@ -654,55 +657,12 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxCi)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxMobile)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxCareer)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label9)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxName)
-        Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label8)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.Panel3)
         Me.PanelRegistrationandEditUserData.Location = New System.Drawing.Point(332, 20)
         Me.PanelRegistrationandEditUserData.Name = "PanelRegistrationandEditUserData"
         Me.PanelRegistrationandEditUserData.Size = New System.Drawing.Size(588, 546)
         Me.PanelRegistrationandEditUserData.TabIndex = 6
-        '
-        'vecesDedo
-        '
-        Me.vecesDedo.AutoSize = True
-        Me.vecesDedo.Location = New System.Drawing.Point(310, 198)
-        Me.vecesDedo.Name = "vecesDedo"
-        Me.vecesDedo.Size = New System.Drawing.Size(121, 13)
-        Me.vecesDedo.TabIndex = 29
-        Me.vecesDedo.Text = "Necesitas pasar el dedo"
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox5.Controls.Add(Me.imagenHuella)
-        Me.GroupBox5.Location = New System.Drawing.Point(313, 214)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(119, 109)
-        Me.GroupBox5.TabIndex = 28
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Huella"
-        '
-        'imagenHuella
-        '
-        Me.imagenHuella.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.imagenHuella.Image = Global.WindowsApp1.My.Resources.Resources.huella_2
-        Me.imagenHuella.Location = New System.Drawing.Point(14, 19)
-        Me.imagenHuella.Name = "imagenHuella"
-        Me.imagenHuella.Size = New System.Drawing.Size(88, 83)
-        Me.imagenHuella.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.imagenHuella.TabIndex = 0
-        Me.imagenHuella.TabStop = False
-        '
-        'TextBoxObservations
-        '
-        Me.TextBoxObservations.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxObservations.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxObservations.Location = New System.Drawing.Point(116, 171)
-        Me.TextBoxObservations.Name = "TextBoxObservations"
-        Me.TextBoxObservations.Size = New System.Drawing.Size(439, 20)
-        Me.TextBoxObservations.TabIndex = 27
         '
         'PanelReadingTagProcess
         '
@@ -710,7 +670,7 @@ Partial Class Form1
         Me.PanelReadingTagProcess.Controls.Add(Me.PictureBox2)
         Me.PanelReadingTagProcess.Controls.Add(Me.ButtonCloseReadingTag)
         Me.PanelReadingTagProcess.Controls.Add(Me.Label16)
-        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(206, 140)
+        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(206, 87)
         Me.PanelReadingTagProcess.Margin = New System.Windows.Forms.Padding(6)
         Me.PanelReadingTagProcess.Name = "PanelReadingTagProcess"
         Me.PanelReadingTagProcess.Size = New System.Drawing.Size(187, 165)
@@ -751,10 +711,51 @@ Partial Class Form1
         Me.Label16.TabIndex = 18
         Me.Label16.Text = "Lectura etiqueta Rfid..."
         '
+        'vecesDedo
+        '
+        Me.vecesDedo.AutoSize = True
+        Me.vecesDedo.Location = New System.Drawing.Point(311, 210)
+        Me.vecesDedo.Name = "vecesDedo"
+        Me.vecesDedo.Size = New System.Drawing.Size(121, 13)
+        Me.vecesDedo.TabIndex = 29
+        Me.vecesDedo.Text = "Necesitas pasar el dedo"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox5.Controls.Add(Me.imagenHuella)
+        Me.GroupBox5.Location = New System.Drawing.Point(313, 224)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(119, 109)
+        Me.GroupBox5.TabIndex = 28
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Huella"
+        '
+        'imagenHuella
+        '
+        Me.imagenHuella.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.imagenHuella.Image = Global.WindowsApp1.My.Resources.Resources.huella_2
+        Me.imagenHuella.Location = New System.Drawing.Point(14, 19)
+        Me.imagenHuella.Name = "imagenHuella"
+        Me.imagenHuella.Size = New System.Drawing.Size(88, 83)
+        Me.imagenHuella.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.imagenHuella.TabIndex = 0
+        Me.imagenHuella.TabStop = False
+        '
+        'TextBoxObservations
+        '
+        Me.TextBoxObservations.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBoxObservations.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TextBoxObservations.Location = New System.Drawing.Point(29, 187)
+        Me.TextBoxObservations.Name = "TextBoxObservations"
+        Me.TextBoxObservations.Size = New System.Drawing.Size(517, 20)
+        Me.TextBoxObservations.TabIndex = 27
+        '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(15, 174)
+        Me.Label21.Location = New System.Drawing.Point(37, 177)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(84, 13)
         Me.Label21.TabIndex = 26
@@ -765,15 +766,15 @@ Partial Class Form1
         Me.TextBoxAddress.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxAddress.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxAddress.Location = New System.Drawing.Point(116, 142)
+        Me.TextBoxAddress.Location = New System.Drawing.Point(29, 152)
         Me.TextBoxAddress.Name = "TextBoxAddress"
-        Me.TextBoxAddress.Size = New System.Drawing.Size(439, 20)
+        Me.TextBoxAddress.Size = New System.Drawing.Size(517, 20)
         Me.TextBoxAddress.TabIndex = 25
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(32, 149)
+        Me.Label20.Location = New System.Drawing.Point(37, 142)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(55, 13)
         Me.Label20.TabIndex = 24
@@ -784,15 +785,15 @@ Partial Class Form1
         Me.TextBoxMail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxMail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxMail.Location = New System.Drawing.Point(116, 115)
+        Me.TextBoxMail.Location = New System.Drawing.Point(29, 119)
         Me.TextBoxMail.Name = "TextBoxMail"
-        Me.TextBoxMail.Size = New System.Drawing.Size(439, 20)
+        Me.TextBoxMail.Size = New System.Drawing.Size(517, 20)
         Me.TextBoxMail.TabIndex = 23
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(11, 122)
+        Me.Label19.Location = New System.Drawing.Point(37, 110)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(99, 13)
         Me.Label19.TabIndex = 22
@@ -803,15 +804,15 @@ Partial Class Form1
         Me.TextBoxCu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxCu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxCu.Location = New System.Drawing.Point(379, 87)
+        Me.TextBoxCu.Location = New System.Drawing.Point(302, 87)
         Me.TextBoxCu.Name = "TextBoxCu"
-        Me.TextBoxCu.Size = New System.Drawing.Size(200, 20)
+        Me.TextBoxCu.Size = New System.Drawing.Size(270, 20)
         Me.TextBoxCu.TabIndex = 21
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(276, 90)
+        Me.Label18.Location = New System.Drawing.Point(310, 76)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(105, 13)
         Me.Label18.TabIndex = 20
@@ -822,15 +823,15 @@ Partial Class Form1
         Me.TextBoxSurname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxSurname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxSurname.Location = New System.Drawing.Point(326, 17)
+        Me.TextBoxSurname.Location = New System.Drawing.Point(302, 16)
         Me.TextBoxSurname.Name = "TextBoxSurname"
-        Me.TextBoxSurname.Size = New System.Drawing.Size(253, 20)
+        Me.TextBoxSurname.Size = New System.Drawing.Size(270, 20)
         Me.TextBoxSurname.TabIndex = 19
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(273, 20)
+        Me.Label17.Location = New System.Drawing.Point(310, 8)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(55, 13)
         Me.Label17.TabIndex = 18
@@ -861,6 +862,7 @@ Partial Class Form1
         Me.PictureBoxImagePreview.Location = New System.Drawing.Point(462, 68)
         Me.PictureBoxImagePreview.Name = "PictureBoxImagePreview"
         Me.PictureBoxImagePreview.Size = New System.Drawing.Size(84, 84)
+        Me.PictureBoxImagePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBoxImagePreview.TabIndex = 22
         Me.PictureBoxImagePreview.TabStop = False
         '
@@ -873,14 +875,14 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.DataGridView1.Location = New System.Drawing.Point(6, 43)
@@ -966,7 +968,7 @@ Partial Class Form1
         Me.GroupBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox3.Controls.Add(Me.PictureBox1)
         Me.GroupBox3.Controls.Add(Me.PictureBoxImageInput)
-        Me.GroupBox3.Location = New System.Drawing.Point(169, 214)
+        Me.GroupBox3.Location = New System.Drawing.Point(169, 224)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(119, 109)
         Me.GroupBox3.TabIndex = 15
@@ -1001,7 +1003,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.LabelGetID)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.ButtonScanID)
-        Me.GroupBox2.Location = New System.Drawing.Point(20, 211)
+        Me.GroupBox2.Location = New System.Drawing.Point(20, 224)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(120, 109)
         Me.GroupBox2.TabIndex = 14
@@ -1051,7 +1053,7 @@ Partial Class Form1
         Me.ButtonClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClearForm.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClearForm.ForeColor = System.Drawing.Color.Black
-        Me.ButtonClearForm.Location = New System.Drawing.Point(464, 275)
+        Me.ButtonClearForm.Location = New System.Drawing.Point(464, 279)
         Me.ButtonClearForm.Name = "ButtonClearForm"
         Me.ButtonClearForm.Size = New System.Drawing.Size(82, 49)
         Me.ButtonClearForm.TabIndex = 13
@@ -1067,7 +1069,7 @@ Partial Class Form1
         Me.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonSave.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSave.ForeColor = System.Drawing.Color.Black
-        Me.ButtonSave.Location = New System.Drawing.Point(464, 210)
+        Me.ButtonSave.Location = New System.Drawing.Point(464, 224)
         Me.ButtonSave.Name = "ButtonSave"
         Me.ButtonSave.Size = New System.Drawing.Size(82, 49)
         Me.ButtonSave.TabIndex = 12
@@ -1077,7 +1079,7 @@ Partial Class Form1
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(11, 90)
+        Me.Label13.Location = New System.Drawing.Point(26, 76)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(56, 13)
         Me.Label13.TabIndex = 11
@@ -1086,7 +1088,7 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(276, 56)
+        Me.Label12.Location = New System.Drawing.Point(310, 43)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(74, 13)
         Me.Label12.TabIndex = 10
@@ -1097,9 +1099,9 @@ Partial Class Form1
         Me.TextBoxCi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxCi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxCi.Location = New System.Drawing.Point(70, 87)
+        Me.TextBoxCi.Location = New System.Drawing.Point(17, 87)
         Me.TextBoxCi.Name = "TextBoxCi"
-        Me.TextBoxCi.Size = New System.Drawing.Size(200, 20)
+        Me.TextBoxCi.Size = New System.Drawing.Size(253, 20)
         Me.TextBoxCi.TabIndex = 9
         '
         'TextBoxMobile
@@ -1107,9 +1109,9 @@ Partial Class Form1
         Me.TextBoxMobile.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxMobile.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxMobile.Location = New System.Drawing.Point(367, 53)
+        Me.TextBoxMobile.Location = New System.Drawing.Point(302, 53)
         Me.TextBoxMobile.Name = "TextBoxMobile"
-        Me.TextBoxMobile.Size = New System.Drawing.Size(212, 20)
+        Me.TextBoxMobile.Size = New System.Drawing.Size(270, 20)
         Me.TextBoxMobile.TabIndex = 8
         '
         'TextBoxCareer
@@ -1117,15 +1119,15 @@ Partial Class Form1
         Me.TextBoxCareer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxCareer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxCareer.Location = New System.Drawing.Point(70, 53)
+        Me.TextBoxCareer.Location = New System.Drawing.Point(17, 53)
         Me.TextBoxCareer.Name = "TextBoxCareer"
-        Me.TextBoxCareer.Size = New System.Drawing.Size(200, 20)
+        Me.TextBoxCareer.Size = New System.Drawing.Size(253, 20)
         Me.TextBoxCareer.TabIndex = 7
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(11, 56)
+        Me.Label9.Location = New System.Drawing.Point(26, 43)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(47, 13)
         Me.Label9.TabIndex = 6
@@ -1136,15 +1138,15 @@ Partial Class Form1
         Me.TextBoxName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBoxName.Location = New System.Drawing.Point(70, 17)
+        Me.TextBoxName.Location = New System.Drawing.Point(17, 17)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(200, 20)
+        Me.TextBoxName.Size = New System.Drawing.Size(254, 20)
         Me.TextBoxName.TabIndex = 5
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(11, 20)
+        Me.Label8.Location = New System.Drawing.Point(26, 8)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(61, 13)
         Me.Label8.TabIndex = 4
@@ -1154,7 +1156,7 @@ Partial Class Form1
         '
         Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(618, 5)
@@ -1282,8 +1284,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
         Me.Controls.Add(Me.PanelUserData)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
-        Me.Text = "RFID Arduino User by Uteh Str"
+        Me.Text = "Biblioteca FIMEE"
         Me.PanelConnection.ResumeLayout(False)
         Me.PanelConnection.PerformLayout()
         Me.PanelUserData.ResumeLayout(False)
@@ -1294,11 +1297,11 @@ Partial Class Form1
         Me.GroupBox1.PerformLayout()
         Me.PanelRegistrationandEditUserData.ResumeLayout(False)
         Me.PanelRegistrationandEditUserData.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelReadingTagProcess.ResumeLayout(False)
         Me.PanelReadingTagProcess.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).EndInit()

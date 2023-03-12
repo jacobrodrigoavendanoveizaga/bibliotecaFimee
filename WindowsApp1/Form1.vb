@@ -288,7 +288,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonScanPort_MouseLeave(sender As Object, e As EventArgs) Handles ButtonScanPort.MouseLeave
-        ButtonScanPort.ForeColor = Color.FromArgb(6, 71, 165)
+        ButtonScanPort.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 
     Private Sub ButtonConnect_Click(sender As Object, e As EventArgs) Handles ButtonConnect.Click
@@ -318,7 +318,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonConnect_MouseLeave(sender As Object, e As EventArgs) Handles ButtonConnect.MouseLeave
-        ButtonConnect.ForeColor = Color.FromArgb(6, 71, 165)
+        ButtonConnect.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 
     Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
@@ -340,7 +340,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonClear_MouseLeave(sender As Object, e As EventArgs) Handles ButtonClear.MouseLeave
-        ButtonClear.ForeColor = Color.FromArgb(6, 71, 165)
+        ButtonClear.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 
     Private Sub ButtonSave_Click(sender As Object, e As EventArgs) Handles ButtonSave.Click
@@ -531,7 +531,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonSave_MouseLeave(sender As Object, e As EventArgs) Handles ButtonSave.MouseLeave
-        ButtonSave.ForeColor = Color.FromArgb(6, 71, 165)
+        ButtonSave.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 
     Private Sub ButtonClearForm_Click(sender As Object, e As EventArgs) Handles ButtonClearForm.Click
@@ -543,7 +543,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonClearForm_MouseLeave(sender As Object, e As EventArgs) Handles ButtonClearForm.MouseLeave
-        ButtonClearForm.ForeColor = Color.FromArgb(6, 71, 165)
+        ButtonClearForm.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 
     Private Sub ButtonScanID_Click(sender As Object, e As EventArgs) Handles ButtonScanID.Click
@@ -561,7 +561,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonScanID_MouseLeave(sender As Object, e As EventArgs) Handles ButtonScanID.MouseLeave
-        ButtonScanID.ForeColor = Color.FromArgb(6, 71, 165)
+        ButtonScanID.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 
     'CODIGO DE CAPTURA CON LA CAMARA WEB
@@ -1063,6 +1063,8 @@ Public Class Form1
     Private Sub Form1_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
         pararCaptura()
     End Sub
+
+
 
 
 
