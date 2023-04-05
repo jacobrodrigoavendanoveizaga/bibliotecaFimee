@@ -210,6 +210,9 @@ Public Class Busqueda
         Form1.Show()
     End Sub
 
-
-
+    Private Sub btnPrestar2_Click(sender As Object, e As EventArgs) Handles btnPrestar2.Click
+        Dim ticket As New ticket()
+        ticket.MostrarLabels(LabelName1.Text, LabelSurname1.Text, LabelCareer1.Text, LabelMobile1.Text, LabelCi1.Text, LabelCu1.Text)
+        ticket.ShowDialog()
+    End Sub
 End Class

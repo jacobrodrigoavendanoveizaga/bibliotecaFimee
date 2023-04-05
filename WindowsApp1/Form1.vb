@@ -84,6 +84,13 @@ Public Class Form1
 
     Public sRuta As String
 
+    Public labelNameT As String
+    Public labelSurnameT As String
+    Public labelCareerT As String
+    Public labelMobileT As String
+    Public labelCiT As String
+    Public labelCuT As String
+
 
 
 
@@ -638,42 +645,6 @@ Public Class Form1
     End Sub
 
 
-
-    'Private Sub cmdCapturar_Click(sender As Object, e As EventArgs) Handles cmdCapturar.Click
-
-    'End Sub
-
-    'Private Sub cmdBorrar_Click(sender As Object, e As EventArgs) Handles cmdBorrar.Click
-    '    PicFoto.Image = Nothing
-    'End Sub
-
-    'Private Sub btnGuardarFotoArchivo_Click(sender As Object, e As EventArgs) Handles btnGuardarFotoArchivo.Click
-    '    Try
-    '        Dim sFD As New SaveFileDialog
-    '        sFD.Title = "Guardar Imagen"
-    '        sFD.Filter = "Imagenes|*.jpg;*.gif;*.png;*.bmp"
-    '        If sFD.ShowDialog = Windows.Forms.DialogResult.OK Then
-    '            Me.PicFoto.Image.Save(System.IO.Path.GetFullPath(sFD.FileName))
-    '        End If
-    '    Catch ex As Exception
-    '        MessageBox.Show(Err.Description, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End Try
-    'End Sub
-
-    '7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
-    'Private Sub PictureBoxImageInput_Click(sender As Object, e As EventArgs) Handles PictureBoxImageInput.Click
-    '    OpenFileDialog1.FileName = ""
-    '    OpenFileDialog1.Filter = "JPEG (*.jpeg;*.jpg)|*.jpeg;*.jpg"
-
-    '    If (OpenFileDialog1.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
-    '        IMG_FileNameInput = OpenFileDialog1.FileName
-    '        PictureBoxImageInput.ImageLocation = IMG_FileNameInput
-    '    End If
-    'End Sub
-
-
-    '7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
-
     Private Sub CheckBoxByName_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxByName.CheckedChanged
         If CheckBoxByName.Checked = True Then
             CheckBoxByID.Checked = False
@@ -1104,6 +1075,17 @@ Public Class Form1
             Return
         End If
     End Sub
+
+    Private Sub btnPrestar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrestar.Click
+        Dim ticket As New ticket()
+        ticket.MostrarLabels(LabelName.Text, LabelSurname.Text, LabelCareer.Text, LabelMobile.Text, LabelCi.Text, LabelCu.Text)
+        ticket.ShowDialog()
+
+    End Sub
+
+
+
+
 
 
 

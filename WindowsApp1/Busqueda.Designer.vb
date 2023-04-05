@@ -58,6 +58,7 @@ Partial Class Busqueda
         Me.LabelName1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnPrestar2 = New System.Windows.Forms.Button()
         Me.GroupBox5.SuspendLayout()
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxImage.SuspendLayout()
@@ -122,6 +123,7 @@ Partial Class Busqueda
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.btnPrestar2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.LabelObservations1)
         Me.GroupBox1.Controls.Add(Me.Label36)
@@ -435,16 +437,35 @@ Partial Class Busqueda
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nombre(s)"
         '
+        'btnPrestar2
+        '
+        Me.btnPrestar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPrestar2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnPrestar2.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnPrestar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnPrestar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnPrestar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrestar2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrestar2.ForeColor = System.Drawing.Color.Black
+        Me.btnPrestar2.Location = New System.Drawing.Point(464, 148)
+        Me.btnPrestar2.Name = "btnPrestar2"
+        Me.btnPrestar2.Size = New System.Drawing.Size(68, 21)
+        Me.btnPrestar2.TabIndex = 32
+        Me.btnPrestar2.Text = "Prestar"
+        Me.btnPrestar2.UseVisualStyleBackColor = False
+        '
         'Busqueda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(572, 507)
         Me.Controls.Add(Me.GroupBoxImage)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox5)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Busqueda"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Biblioteca FIMEE"
         Me.GroupBox5.ResumeLayout(False)
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
@@ -492,4 +513,5 @@ Partial Class Busqueda
     Friend WithEvents LabelName1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnPrestar2 As Button
 End Class

@@ -40,6 +40,7 @@ Partial Class Form1
         Me.PictureBoxUserImage = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnPrestar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.LabelObservations = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
@@ -70,6 +71,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -129,7 +131,6 @@ Partial Class Form1
         Me.ButtonRegistration = New System.Windows.Forms.Button()
         Me.ButtonUserData = New System.Windows.Forms.Button()
         Me.ButtonConnection = New System.Windows.Forms.Button()
-        Me.btnExport = New System.Windows.Forms.Button()
         Me.PanelConnection.SuspendLayout()
         Me.PanelUserData.SuspendLayout()
         Me.GroupBoxImage.SuspendLayout()
@@ -168,9 +169,9 @@ Partial Class Form1
         Me.LabelDataTime.AutoSize = True
         Me.LabelDataTime.Location = New System.Drawing.Point(728, 4)
         Me.LabelDataTime.Name = "LabelDataTime"
-        Me.LabelDataTime.Size = New System.Drawing.Size(176, 13)
+        Me.LabelDataTime.Size = New System.Drawing.Size(183, 13)
         Me.LabelDataTime.TabIndex = 3
-        Me.LabelDataTime.Text = "Time 00:00:00 Date 00  mmm, 0000"
+        Me.LabelDataTime.Text = "Hora 00:00:00 Fecha 00  mmm, 0000"
         '
         'PanelConnection
         '
@@ -318,6 +319,7 @@ Partial Class Form1
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.btnPrestar)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.LabelObservations)
         Me.GroupBox1.Controls.Add(Me.Label36)
@@ -353,6 +355,23 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos del usuario"
+        '
+        'btnPrestar
+        '
+        Me.btnPrestar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPrestar.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnPrestar.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnPrestar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnPrestar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnPrestar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrestar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrestar.ForeColor = System.Drawing.Color.Black
+        Me.btnPrestar.Location = New System.Drawing.Point(464, 154)
+        Me.btnPrestar.Name = "btnPrestar"
+        Me.btnPrestar.Size = New System.Drawing.Size(68, 21)
+        Me.btnPrestar.TabIndex = 32
+        Me.btnPrestar.Text = "Prestar"
+        Me.btnPrestar.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -665,6 +684,22 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData.Name = "PanelRegistrationandEditUserData"
         Me.PanelRegistrationandEditUserData.Size = New System.Drawing.Size(588, 546)
         Me.PanelRegistrationandEditUserData.TabIndex = 6
+        '
+        'btnExport
+        '
+        Me.btnExport.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnExport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExport.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExport.ForeColor = System.Drawing.Color.Black
+        Me.btnExport.Location = New System.Drawing.Point(464, 298)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(82, 28)
+        Me.btnExport.TabIndex = 30
+        Me.btnExport.Text = "Exportar"
+        Me.btnExport.UseVisualStyleBackColor = False
         '
         'Label20
         '
@@ -1272,22 +1307,6 @@ Partial Class Form1
         Me.ButtonConnection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConnection.UseVisualStyleBackColor = True
         '
-        'btnExport
-        '
-        Me.btnExport.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btnExport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExport.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExport.ForeColor = System.Drawing.Color.Black
-        Me.btnExport.Location = New System.Drawing.Point(464, 298)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(82, 28)
-        Me.btnExport.TabIndex = 30
-        Me.btnExport.Text = "Exportar"
-        Me.btnExport.UseVisualStyleBackColor = False
-        '
         'Form1
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock
@@ -1299,9 +1318,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBoxStatusConnect)
         Me.Controls.Add(Me.LabelConectionStatus)
         Me.Controls.Add(Me.PanelMenu)
+        Me.Controls.Add(Me.PanelUserData)
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
-        Me.Controls.Add(Me.PanelUserData)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Biblioteca FIMEE"
@@ -1444,4 +1463,5 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnExport As Button
+    Friend WithEvents btnPrestar As Button
 End Class

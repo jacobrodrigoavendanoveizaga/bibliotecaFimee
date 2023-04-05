@@ -192,3 +192,4 @@ C:\Users\pikachu\Desktop\ProyectoFIMEE\proyectoDeGrado2023\bibliotecaFimee\Windo
 C:\Users\pikachu\Desktop\ProyectoFIMEE\proyectoDeGrado2023\bibliotecaFimee\WindowsApp1\obj\Debug\WindowsApp1.exe
 C:\Users\pikachu\Desktop\ProyectoFIMEE\proyectoDeGrado2023\bibliotecaFimee\WindowsApp1\obj\Debug\WindowsApp1.xml
 C:\Users\pikachu\Desktop\ProyectoFIMEE\proyectoDeGrado2023\bibliotecaFimee\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\pikachu\Desktop\ProyectoFIMEE\proyectoDeGrado2023\bibliotecaFimee\WindowsApp1\obj\Debug\WindowsApp1.ticket.resources
